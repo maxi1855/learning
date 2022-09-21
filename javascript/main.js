@@ -1,11 +1,9 @@
-const CONSTANTE = 1;
-let variableVacia = null;
-let variableInicializada;
-
 /* 
 let nombre = prompt("Ingrese su nombre:");
 document.write("Bienvenido " + nombre);
 */
+
+// alert("Alerta por pantalla")
 
 /*
 let nombre = "Maxi";
