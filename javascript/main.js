@@ -30,3 +30,5 @@ if (altura >= 180) {
     document.write("Usted es una persona baja");
 }
 */
+
+// Continuar en el segundo capitulo del curso de javascript de Dalto
