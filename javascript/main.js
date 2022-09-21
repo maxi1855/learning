@@ -12,3 +12,4 @@ let nombre = "Maxi";
 let apellido = "Rodriguez";
 document.write(`Mi nombre es ${nombre} ${apellido}`);
 */
+
