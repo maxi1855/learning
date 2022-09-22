@@ -12,7 +12,8 @@ git branch -d <branch> --> elimina una rama
 git status --> muestra el estado de los archivos
 
 git add <file> --> agrega archivos a la staging area
-git commit -m "message" --> agrega archivos al repositorio local
+git commit -m "message" --> agrega archivos al repositorio local con un mensaje
+git commit -a -m "messaje" --> agregar archivos directamente al repositoio local con un mensaje
 
 git remote add <repository> <url>
 
