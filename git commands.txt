@@ -1,31 +1,25 @@
-git init --> inicializar repositorio local
+git init --> inicializa el repositorio local
 
-git config --global user.email "email" --> indicar el email del desarrollador
-git config --global user.name "name" --> indicar el nombre del desarrollador
-
-git add <file> --> agregar archivos a la staging area
-git add . --> agregar todos los archivos a la staging area
-
-git checkout -- <file> --> descartar los cambios realizados en la working directory
-
-git status --> ver el estado de los archivos
-
-git commit -m "message" --> agregar archivos al repositorio local
-
-git remote add origin <url>
-
-git push -u origin master --> agregar archivos al repositorio remoto
-
-git log --> historial de commits
-
-git pull --> 
-git clone --> 
+git config --global user.email "email" --> configura el email que aparece en los commit
+git config --global user.name "name" --> configura el nombre que aparece en los commit
 
 git branch --> estado de ramas
-git branch <name> --> crea una rama nueva
-git checkout <name> --> cambia de rama
+git checkout <branch> --> cambia de rama
+git branch -m <branch> --> renombra la rama actual
+git branch <branch> --> crea una rama nueva
 
+git status --> muestra el estado de los archivos
 
-	[working directory] ---> git add --> [staging area] --> git commit --> [repository]
+git add <file> --> agrega archivos a la staging area
+git commit -m "message" --> agrega archivos al repositorio local
 
+git remote add <repository> <url>
 
+git push <repository> <branch> --> agregar archivos al repositorio remoto
+
+git pull --> baja y sincrioniza los archivos del repositorio remoto
+git clone <url> --> descarga los archivos del repositorio remoto
+
+git log --> muestra el historial de commits
+
+[working directory] ---> git add --> [staging area] --> git commit --> [local] --> git push --> [remote]
