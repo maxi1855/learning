@@ -1,33 +1,24 @@
-/* 
-let nombre = prompt("Ingrese su nombre:");
-document.write("Bienvenido " + nombre);
-*/
+// ================================== Capitulo 1 ==================================
 
-// alert("Alerta por pantalla")
+// let variableName = "value";
 
-/*
-let nombre = "Maxi";
-let apellido = "Rodriguez";
-document.write(`Mi nombre es ${nombre} ${apellido}`);
-*/
+// document.write(`La variable es ${variableName}.`);
 
-/*
-valor1 = true;
-valor2 = false;
-document.write(valor1 && valor2);
-document.write(valor1 || valor2);
-*/
+// prompt("Solicitud de datos:");
 
-/* 
-let altura = prompt("Ingrese su altura en centímetros:");
-if (altura >= 180) {
-    document.write("Usted es una persona alta");
-} else if (altura >= 170) {
-    document.write("Usted es una persona mediana");
-} else {
-    document.write("Usted es una persona baja");
-}
-*/
+// alert("Mostrar por pantalla");
+// console.log("Mostrar por consola")
+// document.write("Agregar en el index");
 
-// Continuar en el segundo capitulo del curso de javascript de Dalto
+// if (condition) {
+//     content;
+// } else if (secondCondition) {
+//     content;
+// } else {
+//     content;
+// }
 
+// ================================== Capitulo 2 ==================================
+
+// let arrayName = ["firstValue", "secondValue"];
+// document.write(arrayName[position]);
