@@ -30,3 +30,4 @@ if (altura >= 180) {
 */
 
 // Continuar en el segundo capitulo del curso de javascript de Dalto
+
