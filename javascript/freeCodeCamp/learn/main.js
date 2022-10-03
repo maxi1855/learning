@@ -1,5 +1,3 @@
-// ===================================== Array =====================================
-
 /*
 let arrayBidimensional = [
   [firstArray],
@@ -22,10 +20,13 @@ array.unshift(element); // agrega un elemento al principio de un array
 console.log(JSON.stringify(array)); // muestra un array de forma mas correcta
 */
 
-// =================================== Functions ===================================
-
 /*
 function functionName(firstParameter, secondParameter) {
   // content of function
 }
+*/
+
+/*
+console.log(9 == "9"); // true - igualdad
+console.log(9 === "9"); // false - igualdad estricta
 */
