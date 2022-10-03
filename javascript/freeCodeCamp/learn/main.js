@@ -27,6 +27,34 @@ function functionName(firstParameter, secondParameter) {
 */
 
 /*
-console.log(9 == "9"); // true - igualdad
-console.log(9 === "9"); // false - igualdad estricta
+== ; === --> igualdad e igualdad estricta
+!= ; !== --> desigualdad y desigualdad estricta
+&& --> and
+|| --> or
+!value --> not
+*/
+
+/*
+if (condition) {
+  // do that
+} else if (anotherCondition) {
+  // do that
+} else {
+  // do that
+}
+*/
+
+/*
+switch (value) {
+  case firstValue:
+    // do that
+    break;
+  case secondValue:
+  case thirdValue:
+    // do the same thing
+    break;
+  default:
+    // do that for default
+    break; // optional
+}
 */
