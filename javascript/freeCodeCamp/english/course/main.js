@@ -20,7 +20,7 @@ const CONST_NAME = "value constant";
 // ======================= Operators ======================
 
 /*
-+, -, *, /, %, +=, -=, *= /=, ++, -- 
++, -, *, /, %, +=, -=, *= /=, ++, --, ==, ===, !=, !==, &&, ||, >=, <=
 */
 
 // ======================== Strings =======================
@@ -68,4 +68,14 @@ function functionName(firstParameter, secondParameter) {
   // do that;
 }
 
-// ======================= Scope =======================
+// ===================== Conditionals =====================
+
+if (condition) {
+  // do that;
+} else if (secondCondition) {
+  // do that;
+} else {
+  // do that;
+}
+
+// =======================  =======================
