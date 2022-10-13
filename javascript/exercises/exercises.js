@@ -1,8 +1,12 @@
 // =========================== Golf score ===========================
 /*
-- Ingresar el par y los golpes realizados
-- Devolver el puntaje obtenido
+Requerimientos:
+- Ingresar par y golpes
+- Devolver puntaje
 */
+
+console.log("Golf score");
+console.log("==================================================");
 
 let resultsOfGolf = ["Hole in one", "Eagle", "Birdie", "Par", "Bogey", "Double bogey", "Go home"]
 
@@ -29,6 +33,16 @@ function golfScore(par, strokes) {
 console.log(golfScore(6, 6));
 
 // ========================= Counting cards =========================
+/*
+Requerimientos:
+- Ingresar carta
+- En caso de ser valor bajo sumar 1
+- En caso de ser valor alto restar 1
+- Devolver sugestion
+*/
+
+console.log("\nCounting cards");
+console.log("==================================================");
 
 let count = 0;
 
@@ -66,14 +80,18 @@ console.log(countingCards(4));
 
 // ======================= Record collection ========================
 /*
+Requerimientos:
 - Ingresar id, propiedad y valor
 - Actualizar la coleccion con el valor enviado
 - En caso de que el valor sea "" eliminar la propiedad
 - En caso de que sea una canción agregarla al final de la lista
 */
 
+console.log("\nRecord collection");
+console.log("==================================================");
+
 let collection = {
-  "2548": {
+  2548: {
     "album": "Slippery When Wet",
     "artist": "Bon Jovi",
     "tracks": [
@@ -81,7 +99,7 @@ let collection = {
       "You Give Love a Bad Name"
     ]
   },
-  "2468": {
+  2468: {
     "album": "1999",
     "artist": "Prince",
     "tracks": [
@@ -89,42 +107,38 @@ let collection = {
       "Little Red Corvette"
     ]
   },
-  "1245": {
+  1245: {
     "artist": "Robert Palmer",
     "tracks": []
   },
-  "5439": {
+  5439: {
     "album": "ABBA Gold"
   }
 };
 
-function updateRecords(id, prop, value) {
-
-  if (!collection[id].hasOwnProperty(prop)) {
-    if (value == "") {
-      console.log("Error, no podemos eliminar una propiedad inexistente.");
-    } else if (prop == "tracks") {
-      collection[id][prop] = [value];
-      console.log("La lista de canciones se ha creado exitosamente.");
-    } else {
-      collection[id][prop] = value;
-      console.log(`La propiedad "${prop}" se ha creado con el valor "${value}".`);
-    }
+function updateRecords(id, prop, val) {
+  if (val === "") {
+    delete collection[id][prop];
+  } else if (prop === "tracks") {
+    collection[id][prop] = collection[id][prop] || []; // Si la primera opcion es undefined, selecciona la otra opcion
+    collection[id][prop].push(val);
   } else {
-    if (value == "") {
-      delete collection[id][prop];
-      console.log("La propiedad se ha borrado exitosamente.");
-    } else if (prop == "tracks") {
-      collection[id][prop].push(value);
-      console.log("La canción se ha agregado exitosamente.");
-    } else {
-      collection[id][prop] = value;
-      console.log(`La propiedad "${prop}" se ha actualizado con el valor "${value}".`);
-    }
+    collection[id][prop] = val;
   }
-  console.log("=====================================================================");
-  console.log("Colección actualizada:\n")
-  console.log(collection);
 }
 
-updateRecords("2468", "artist", "Quincy");
+console.log("Antes:");
+console.log(JSON.stringify(collection));
+
+updateRecords(2468, "artist", "Quincy");
+
+console.log("\nDespués:");
+console.log(JSON.stringify(collection));
+
+// ===========================  ===========================
+/*
+Requerimientos:
+*/
+
+console.log("");
+console.log("==================================================");
