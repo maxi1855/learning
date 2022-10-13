@@ -1,4 +1,8 @@
 // =========================== Golf score ===========================
+/*
+- Ingresar el par y los golpes realizados
+- Devolver el puntaje obtenido
+*/
 
 let resultsOfGolf = ["Hole in one", "Eagle", "Birdie", "Par", "Bogey", "Double bogey", "Go home"]
 
@@ -25,7 +29,6 @@ function golfScore(par, strokes) {
 console.log(golfScore(6, 6));
 
 // ========================= Counting cards =========================
-// ==================================================================
 
 let count = 0;
 
@@ -63,10 +66,10 @@ console.log(countingCards(4));
 
 // ======================= Record collection ========================
 /*
-Requerimientos:
-- agregar el valor 
-- si el valor es "" borrar la propiedad
-- si es un track agregarlo al final de la lista
+- Ingresar id, propiedad y valor
+- Actualizar la coleccion con el valor enviado
+- En caso de que el valor sea "" eliminar la propiedad
+- En caso de que sea una canción agregarla al final de la lista
 */
 
 let collection = {
@@ -96,8 +99,32 @@ let collection = {
 };
 
 function updateRecords(id, prop, value) {
-  // code
+
+  if (!collection[id].hasOwnProperty(prop)) {
+    if (value == "") {
+      console.log("Error, no podemos eliminar una propiedad inexistente.");
+    } else if (prop == "tracks") {
+      collection[id][prop] = [value];
+      console.log("La lista de canciones se ha creado exitosamente.");
+    } else {
+      collection[id][prop] = value;
+      console.log(`La propiedad "${prop}" se ha creado con el valor "${value}".`);
+    }
+  } else {
+    if (value == "") {
+      delete collection[id][prop];
+      console.log("La propiedad se ha borrado exitosamente.");
+    } else if (prop == "tracks") {
+      collection[id][prop].push(value);
+      console.log("La canción se ha agregado exitosamente.");
+    } else {
+      collection[id][prop] = value;
+      console.log(`La propiedad "${prop}" se ha actualizado con el valor "${value}".`);
+    }
+  }
+  console.log("=====================================================================");
+  console.log("Colección actualizada:\n")
+  console.log(collection);
 }
 
-// updateRecords("2468", "artist", "Quincy");
-// updateRecords("5439", "album", "");
+updateRecords("2468", "artist", "Quincy");
