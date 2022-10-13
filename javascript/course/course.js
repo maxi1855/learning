@@ -105,3 +105,7 @@ let secondPropertyObject = objectName["second property"];
 
 objectName.thirdProperty = "third value";
 delete objectName.thirdProperty;
+
+objectName.hasOwnProperty("propertyToCheck"); // verifica si existe la propiedad
+
+// ===========================  ============================
