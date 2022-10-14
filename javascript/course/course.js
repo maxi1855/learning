@@ -112,10 +112,54 @@ objectName.hasOwnProperty("propertyToCheck"); // verifica si existe la propiedad
 
 let i = 0;
 while (i < 2) {
-  console.log(`While - loop: ${i}`);
+  // code
   i++;
 }
 
-for (let i = 0; i < 2; i++) {
-  console.log(`For - loop: ${i}`);
+for (let j = 0; j < 2; j++) {
+  // code
 }
+
+let k = 0;
+do {
+  // code
+  k++;
+} while (k < 2)
+
+// ====================== Random functions ========================
+
+let randomFloat = Math.random(); // retorna un numero decimal entre 0 y 1
+let wholeNumber = Math.floor(Math.random() * 10); // retorna un numero entre 0 y 9
+
+// retorna un numero en el rango enviado
+function randomRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// ====================== Convert functions =======================
+
+let myInt = parseInt("12");
+let myFloat = parseFloat("3.14");
+
+// ====================== Ternary operator ========================
+
+let resultEqual = 2 === 3 ? "Son iguales" : "No son iguales";
+
+
+function checkSign(number) {
+  return number > 0 ? "Positivo" : number === 0 ? "Cero" : "Negativo";
+}
+
+// ========================= "use strict" =========================
+
+"use strict"; // Verifica que todas las variables esten inicializadas
+
+// ===================== Prevent mutations  =======================
+
+const ID = {
+  "name": "Maxi",
+  "surname": "Rodriguez",
+  "dni": 43369962
+};
+
+Object.freeze(ID); // Previene que se modifique un objeto

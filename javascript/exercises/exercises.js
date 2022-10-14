@@ -135,10 +135,52 @@ updateRecords(2468, "artist", "Quincy");
 console.log("\nDespués:");
 console.log(JSON.stringify(collection));
 
-// ===========================  ===========================
+// ========================= Profile lookup =========================
 /*
 Requerimientos:
+- Ingresar nombre y propiedad
+- Devolver el valor de la propiedad ingresada
+- En caso de no tener ese contacto, devolver "Contacto no encontrado"
+- En caso de no encontrar esa propiedad, devolver "Propiedad invalida"
 */
 
-console.log("");
+console.log("\nProfile lookup");
 console.log("==================================================");
+
+let contacts = [
+  {
+    "firstName": "Akira",
+    "lastName": "Laine",
+    "number": "0543236543",
+    "likes": ["Pizza", "Coding", "Brownie Points"]
+  },
+  {
+    "firstName": "Harry",
+    "lastName": "Potter",
+    "number": "0994372684",
+    "likes": ["Hogwards", "Magic", "Hagrid"]
+  },
+  {
+    "firstName": "Sherlock",
+    "lastName": "Holmes",
+    "number": "0487345643",
+    "likes": ["Intriguing Cases", "Violin"]
+  },
+  {
+    "firstName": "Kristian",
+    "lastName": "Vos",
+    "number": "Unknown",
+    "likes": ["JavaScript", "Gaming", "Foxes"]
+  }
+];
+
+function lookUpProfile(name, property) {
+  for (let i = 0; i < contacts.length; i++) {
+    if (name === contacts[i].firstName) {
+      return contacts[i][property] || "Propiedad no encontrada";
+    }
+  }
+  return "Contacto no encontrado.";
+}
+
+console.log(lookUpProfile("Akira", "likes"));
