@@ -108,4 +108,14 @@ delete objectName.thirdProperty;
 
 objectName.hasOwnProperty("propertyToCheck"); // verifica si existe la propiedad
 
-// ===========================  ============================
+// ============================ Loops =============================
+
+let i = 0;
+while (i < 2) {
+  console.log(`While - loop: ${i}`);
+  i++;
+}
+
+for (let i = 0; i < 2; i++) {
+  console.log(`For - loop: ${i}`);
+}
