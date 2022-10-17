@@ -163,3 +163,15 @@ const ID = {
 };
 
 Object.freeze(ID); // Previene que se modifique un objeto
+
+// ====================== Arrow functions =========================
+
+function sayHi(name) {
+  return `Hi ${name}`;
+}
+
+let saludo = sayHi(myName);
+
+saludo = (myName) => `Hi ${myName}`;
+
+// ===================== Default parameter ========================
